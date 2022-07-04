@@ -1,3 +1,41 @@
+class Usuario {
+    constructor(nombre, mail, persona, edad){
+    this.nombre = nombre
+    this.mail = mail
+    this.persona = persona
+    this.edad= edad
+}
+}
+let usuarios = []
+function registrarUsuario(){
+    let cantUsuarios = parseInt(prompt("En el caso de que sea una compra grupal, por cuantas personas tendriamos que dividir el monto total?"))
+ 
+    for(index=0;index < cantUsuarios; index++){
+        let nombre = prompt ("Ingrese su nombre completo")
+        let mail = prompt ("Ingrese su correo electronico")
+        let persona = prompt ("A nombre de quien iría esta factura?")
+        let edad = parseInt(prompt("Cual es tu edad?"))
+
+        let usuarioRegistrado = new Usuario(nombre, mail, persona, edad)
+
+        usuarios.push(usuarioRegistrado)
+    }
+    console.log(usuarios)
+}
+function buscarCliente(){
+    let nombreCliente= prompt("A que cliente buscas?")
+    const resultado = usuarios.find((el) => el.nombre === nombreCliente)
+    if (resultado !== undefined) {
+        alert("A quien va dirigida esta factura es: " + resultado.nombre + " Enviar vía mail al correo: " + resultado.mail)
+    } else {
+        alert('No existe')
+    }
+}
+function main(){
+    registrarUsuario()
+}
+main()
+
 let cantidadDeProductos = 0
 function compra(entrada) {
     while (entrada !== "no") {
@@ -89,6 +127,7 @@ function sumaFinal(suma, cantidadCuotas){
 }
 let entrada = prompt("Quieres hacer una compra?")
 compra(entrada)
+buscarCliente()
 
 
 function ProductoStock (nombre, precio, cantidad){
