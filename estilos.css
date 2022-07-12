@@ -1,0 +1,23 @@
+.logo{
+    width: 10px;
+    height: 10px;
+}
+
+.navbar{
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 0 5px white;
+    font-size: 20px;
+}
+.navbar:hover{
+    color: green;  
+}
+.nav-link{
+    text-decoration: none;
+    color: white;
+}
+.nav-link:hover{
+    color: green;
+}
