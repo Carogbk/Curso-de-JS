@@ -61,13 +61,30 @@ function limpiarCarrito(){
     divCarrito.innerHTML="";
 }
 
-function actualizarCarrito(){
+function actualizarCarrito(carrito){
     let divCarrito= document.querySelector("#carrito");
     carrito.productos.forEach(producto =>{
-    divCarrito.innerHTML += cardRendered(producto);
+        divCarrito.innerHTML += cardRendered(producto);
     })
     divCarrito.innerHTML += `<h2>Precio Total $ ${carrito.totalCompra()}</h2> `
 }
+
+function renovarStorage(){
+    localStorage.removeItem("carrito");
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
+// Cargar carrito existente
+window.addEventListener('DOMContentLoaded',(e)=>{
+    let storage = JSON.parse(localStorage.getItem("carrito"));
+    let carritoGuardado = new CarritoCompra(storage.id,storage.productos);
+    storage.productos.forEach(producto=>{
+        carritoGuardado.productos.push(producto)
+    })
+    console.log(carritoGuardado);
+    limpiarCarrito();
+    actualizarCarrito(carritoGuardado);
+});
 
 // CARRITO DE COMPRAS
 
@@ -82,7 +99,8 @@ boton.addEventListener("click", (e)=>{
     console.log(carrito);
     console.log(carrito.totalCompra());
     limpiarCarrito();
-    actualizarCarrito();
+    actualizarCarrito(carrito);
+    renovarStorage();
 })
 })
 
