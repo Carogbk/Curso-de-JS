@@ -1,9 +1,69 @@
-.logo{
-    width: 10px;
-    height: 10px;
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+img{
+    display: block;
+}
+.navbar{
+    background-color: #265961;
+}
+.main-header{
+    padding: 0 20px;
+}
+.title-header{
+    text-align: center;
+    font-size: 2.5em;
+    justify-content: center;
+    background-color: #B4DAA9;
+    text-shadow: 0 0 5px #041122;
+}
+.contenido-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenido-header1{
+    display: box;
+    justify-content: space-between;
+    align-items: center;
+}
+.contenido-header2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.carrito-header{
+    display: block;
+    padding: 10px 25px;
+    color: #9A99AD;
+    border: 1px solid #9A99AD;
+    box-shadow: 0 0 5px #9A99AD;
+    text-decoration: none;
+}
+.icon-search{
+    display: block;
+    padding: 10px;
+    border: 1px solid #9A99AD;
+}
+.carousel-inner{
+    height: 700px;
+}
+.cardBox{
+box-shadow: 0 0 5px #9A99AD;
+text-align: center;
+}
+.botonInicioSesion{
+    color: #265961;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px #265961;
 }
 
-.navbar{
+
+/* .navbar{
     background-color: black;
     font-family: 'Courier New', Courier, monospace;
     color: white;
@@ -20,4 +80,14 @@
 }
 .nav-link:hover{
     color: green;
+} */
+
+/* .carousel-inner{
+    background-position: center;
+    margin: auto;
+    height: 300px;
 }
+.carouselProductos{
+object-fit: cover;
+-o-object-fit: cover;
+} */

@@ -1,3 +1,4 @@
+
 // CLASES
 class Productos{
     constructor(id, nombre, imagen, precio){
@@ -29,10 +30,24 @@ let catalogoProductos = [];
 let producto1= new Productos(1, "pelota1", "producto1.jpg", 3000);
 let producto2= new Productos(2, "pelota2", "producto2.jpg", 4000);
 let producto3= new Productos(3, "pelota3", "producto3.jpg", 5000);
+let producto4= new Productos(4, "pelota4", "producto4.jpg", 5000);
+let producto5= new Productos(5, "pelota5", "producto5.jpg", 5000);
+let producto6= new Productos(6, "pelota6", "producto6.jpg", 5000);
+let producto7= new Productos(7, "pelota7", "producto7.jpg", 5000);
+let producto8= new Productos(8, "pelota8", "producto8.jpg", 5000);
+let producto9= new Productos(9, "pelota9", "producto9.jpg", 5000);
+let producto10= new Productos(10, "pelota10", "producto10.jpg", 5000);
 
 catalogoProductos.push(producto1);
 catalogoProductos.push(producto2);
 catalogoProductos.push(producto3);
+catalogoProductos.push(producto4);
+catalogoProductos.push(producto5);
+catalogoProductos.push(producto6);
+catalogoProductos.push(producto7);
+catalogoProductos.push(producto8);
+catalogoProductos.push(producto9);
+catalogoProductos.push(producto10);
 
 // PRODUCTOS
 let cardsDiv = document.querySelector("#cards");
@@ -44,16 +59,39 @@ catalogoProductos.forEach(productos => {
 // FUNCIONES
 function cardRendered(productos){
     let cardRendered = `
-<div class="card m-3" style="width: 18rem;">
+<div class="cardBox m-3" style="width: 18rem;">
         <img src="./img/productos/${productos.imagen}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">${productos.nombre}</h5>
             <p class="card-text">$${productos.precio}</p>
-            <a id="${productos.id}" class="btn btn-outline-success botonCompra">Comprar</a>
+            <button onclick="miFunc()" id="${productos.id}" class="btn btn-outline-success botonCompra">Comprar</button>
         </div>
     </div>
     `
     return cardRendered;
+    
+}
+function miFunc() {
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Has agregado el producto al carrito ',
+        showConfirmButton: false,
+        timer: 2500
+    })
+
+}
+function finalizarCompra() {
+    Swal.fire({
+        title: 'Antes de finalizar la compra recordá registrar tu usuario',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      })
+
 }
 
 function limpiarCarrito(){
