@@ -21,40 +21,49 @@
         <div class="contenido-header1">
             <span>Contáctanos</span>
             <p><i class="fa-solid fa-phone"></i>Télefono 3571614756</p>
-    </div>
-    <div class="contenido-header2">
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button class="btn btn-outline-success me-md-1 botonInicioSesion" type="button"><i class="fa-solid fa-circle-user">Iniciar Sesion</i></button>
-      </div>
-      
-        <form class="d-flex">
-          <input class="form-control me-2" type="Buscar Productos" placeholder="Buscar Productos" aria-label="Buscar">
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
-        
+    </div>      
+        <div class="contenido-header2">
         <a href="" class="carrito-header">Mi Carrito <i class="fa-solid fa-cart-shopping"></i></a>
       </div>
     </div>
-    <nav class="container-fluid  position-relative navbar navbar-expand-lg navbar-light">
-        <div class="">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Productos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sobre Nosotros</a>
-              </li>
-            </ul>
-          </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="./img/logo/7a02ddf0-80a6-482a-8765-7d45596bc7b1.jpg" alt="" width="50" height="50">
+    </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Productos
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Futbol</a></li>
+                <li><a class="dropdown-item" href="#">Niños</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#subtituloProductos">Todos los productos</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Iniciar Sesión</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="buscar" placeholder="Buscar Productos" aria-label="buscar">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
         </div>
-      </nav>
+      </div>
+    </nav>
     </header>
     <main>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -83,7 +92,7 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-          <h2>Nuestros productos</h2>
+          <h2 id="subtituloProductos">Nuestros productos</h2>
 
           <div class="container">
             <div class="row" id="cards"></div>
@@ -91,6 +100,7 @@
         <div>
             <h2 class="subtitulo">Registro de tu compra</h2>
         </div>
+        
         <div class="d-flex flex-row bd-highlight mb-3t btnCarrito">
           <div class="p-2 bd-highlight">
           <button onclick="finalizarCompra()" class="btn-outline-success botonFinalizarCompra">Finalizar Compra</button>
@@ -98,11 +108,17 @@
         <div class="p-2 bd-highlight">
           <button onclick="limpiarCarrito()" class="btn-outline-success botonFinalizarCompra">Limpiar Carrito</button>
         </div>
+      </div>
         <div id="carrito"></div>
-
+       
 
     </main>
-
+    <div class="container">
+          <div class="row" id="comentarios">
+    
+          </div>
+    
+        </div>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

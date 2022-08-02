@@ -1,4 +1,26 @@
-
+const contenedorComentario = document.getElementById("comentarios")
+function obtenerComentario(){
+    fetch ("https://jsonplaceholder.typicode.com/comments")
+    .then( (response) => {
+        console.log(response);
+        return response.json();
+    
+        
+    })
+    .then( (data) =>{
+        console.log(data);
+        console.log(data[0].body);
+        data.forEach((comentario)=>{
+            let columna = document.createElement("div")
+            columna.className= "col-md-3"
+            columna.innerHTML=`<p>${comentario}</p>`
+            contenedorComentario.appendChild("columna")
+        })
+        
+    });
+    
+}
+obtenerComentario();
 // CLASES
 class Productos{
     constructor(id, nombre, imagen, precio){
@@ -139,6 +161,7 @@ boton.addEventListener("click", (e)=>{
     limpiarCarrito();
     actualizarCarrito(carrito);
     renovarStorage();
+  
 })
 })
 
