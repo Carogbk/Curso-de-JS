@@ -66,7 +66,16 @@ text-align: center;
     text-shadow: 0 0 5px #041122;
     justify-content: center;
 }
-
+.titleUser{
+    display: flex;
+    text-shadow: 0 0 5px #041122;
+    justify-content: center;  
+}
+.subtitulo{
+    display: flex;
+    text-shadow: 0 0 5px #041122;
+    justify-content: center; 
+}
 
 /* .navbar{
     background-color: black;

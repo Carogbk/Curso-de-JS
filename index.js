@@ -1,33 +1,11 @@
-const contenedorComentario = document.getElementById("comentarios")
-function obtenerComentario(){
-    fetch ("https://jsonplaceholder.typicode.com/comments")
-    .then( (response) => {
-        console.log(response);
-        return response.json();
-    
-        
-    })
-    .then( (data) =>{
-        console.log(data);
-        console.log(data[0].body);
-        data.forEach((comentario)=>{
-            let columna = document.createElement("div")
-            columna.className= "col-md-3"
-            columna.innerHTML=`<p>${comentario}</p>`
-            contenedorComentario.appendChild("columna")
-        })
-        
-    });
-    
-}
-obtenerComentario();
+
 // CLASES
-class Productos{
-    constructor(id, nombre, imagen, precio){
-        this.id=id;
-        this.nombre=nombre;
-        this.imagen=imagen;
-        this.precio=precio;
+class Productos {
+    constructor(id, nombre, imagen, precio) {
+        this.id = id;
+        this.nombre = nombre;
+        this.imagen = imagen;
+        this.precio = precio;
     }
 }
 
@@ -36,10 +14,10 @@ class CarritoCompra {
         this.id = id;
         this.productos = [];
     }
-    totalCompra(){
-        let total=0;
-        for(let i = 0; i < this.productos.length; i++){
-            total= total + this.productos[i].precio;
+    totalCompra() {
+        let total = 0;
+        for (let i = 0; i < this.productos.length; i++) {
+            total = total + this.productos[i].precio;
         }
         return total;
     }
@@ -49,16 +27,16 @@ class CarritoCompra {
 
 let catalogoProductos = [];
 
-let producto1= new Productos(1, "pelota1", "producto1.jpg", 3000);
-let producto2= new Productos(2, "pelota2", "producto2.jpg", 4000);
-let producto3= new Productos(3, "pelota3", "producto3.jpg", 5000);
-let producto4= new Productos(4, "pelota4", "producto4.jpg", 5000);
-let producto5= new Productos(5, "pelota5", "producto5.jpg", 5000);
-let producto6= new Productos(6, "pelota6", "producto6.jpg", 5000);
-let producto7= new Productos(7, "pelota7", "producto7.jpg", 5000);
-let producto8= new Productos(8, "pelota8", "producto8.jpg", 5000);
-let producto9= new Productos(9, "pelota9", "producto9.jpg", 5000);
-let producto10= new Productos(10, "pelota10", "producto10.jpg", 5000);
+let producto1 = new Productos(1, "pelota1", "producto1.jpg", 3000);
+let producto2 = new Productos(2, "pelota2", "producto2.jpg", 4000);
+let producto3 = new Productos(3, "pelota3", "producto3.jpg", 5000);
+let producto4 = new Productos(4, "pelota4", "producto4.jpg", 5000);
+let producto5 = new Productos(5, "pelota5", "producto5.jpg", 5000);
+let producto6 = new Productos(6, "pelota6", "producto6.jpg", 5000);
+let producto7 = new Productos(7, "pelota7", "producto7.jpg", 5000);
+let producto8 = new Productos(8, "pelota8", "producto8.jpg", 5000);
+let producto9 = new Productos(9, "pelota9", "producto9.jpg", 5000);
+let producto10 = new Productos(10, "pelota10", "producto10.jpg", 5000);
 
 catalogoProductos.push(producto1);
 catalogoProductos.push(producto2);
@@ -78,8 +56,11 @@ catalogoProductos.forEach(productos => {
     cardsDiv.innerHTML += cardRendered(productos);
 })
 
+// USUARIOS
+const contenedorComentarios = document.getElementById("comentarios")
+
 // FUNCIONES
-function cardRendered(productos){
+function cardRendered(productos) {
     let cardRendered = `
 <div class="cardBox m-3" style="width: 18rem;">
         <img src="./img/productos/${productos.imagen}" class="card-img-top" alt="...">
@@ -91,8 +72,9 @@ function cardRendered(productos){
     </div>
     `
     return cardRendered;
-    
+
 }
+
 function miFunc() {
     Swal.fire({
         position: 'top-end',
@@ -103,42 +85,70 @@ function miFunc() {
     })
 
 }
+
 function finalizarCompra() {
     Swal.fire({
         title: 'Antes de finalizar la compra recordá registrar tu usuario',
         showClass: {
-          popup: 'animate__animated animate__fadeInDown'
+            popup: 'animate__animated animate__fadeInDown'
         },
         hideClass: {
-          popup: 'animate__animated animate__fadeOutUp'
+            popup: 'animate__animated animate__fadeOutUp'
         }
-      })
+    })
 
 }
 
-function limpiarCarrito(){
-    let divCarrito= document.querySelector("#carrito");
-    divCarrito.innerHTML="";
+function limpiarCarrito() {
+    let divCarrito = document.querySelector("#carrito");
+    divCarrito.innerHTML = "";
 }
 
-function actualizarCarrito(carrito){
-    let divCarrito= document.querySelector("#carrito");
-    carrito.productos.forEach(producto =>{
+function actualizarCarrito(carrito) {
+    let divCarrito = document.querySelector("#carrito");
+    carrito.productos.forEach(producto => {
         divCarrito.innerHTML += cardRendered(producto);
     })
     divCarrito.innerHTML += `<h2>Precio Total $ ${carrito.totalCompra()}</h2> `
 }
 
-function renovarStorage(){
+function renovarStorage() {
     localStorage.removeItem("carrito");
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
+function obtenerComentarios() {
+    fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => {
+            console.log(response);
+            return response.json()
+        })
+        .then((data) => {
+            console.log(data);
+            console.log(data[0].body);
+            data.forEach((comentario) => {
+                let columna = document.createElement("div")
+                columna.className = "col"
+                columna.innerHTML = `<div class="cardBox m-3 border border-success" style="width: 18rem;">
+        <div class="card-header">
+        ${comentario.name}
+        </div>
+        <ul class="list-group list-group-flush">
+        <li class="list-group-item">${comentario.email}</li>
+        <li class="list-group-item">${comentario.phone}</li>
+        <li class="list-group-item">${comentario.address.city}</li>
+        </ul>
+        </div>`
+                contenedorComentarios.appendChild(columna)
+            })
+        });
+
+}
 
 // Cargar carrito existente
-window.addEventListener('DOMContentLoaded',(e)=>{
+window.addEventListener('DOMContentLoaded', (e) => {
     let storage = JSON.parse(localStorage.getItem("carrito"));
-    let carritoGuardado = new CarritoCompra(storage.id,storage.productos);
-    storage.productos.forEach(producto=>{
+    let carritoGuardado = new CarritoCompra(storage.id, storage.productos);
+    storage.productos.forEach(producto => {
         carritoGuardado.productos.push(producto)
     })
     console.log(carritoGuardado);
@@ -148,21 +158,22 @@ window.addEventListener('DOMContentLoaded',(e)=>{
 
 // CARRITO DE COMPRAS
 
-let carrito = new CarritoCompra (1);
+let carrito = new CarritoCompra(1);
 
 let botones = document.querySelectorAll(".botonCompra")
 let arrayBoton = Array.from(botones);
 arrayBoton.forEach(boton => {
-boton.addEventListener("click", (e)=>{
-    productoElegido = catalogoProductos.find(productos => productos.id == e.target.id);
-    carrito.productos.push(productoElegido);
-    console.log(carrito);
-    console.log(carrito.totalCompra());
-    limpiarCarrito();
-    actualizarCarrito(carrito);
-    renovarStorage();
-  
-})
+    boton.addEventListener("click", (e) => {
+        productoElegido = catalogoProductos.find(productos => productos.id == e.target.id);
+        carrito.productos.push(productoElegido);
+        console.log(carrito);
+        console.log(carrito.totalCompra());
+        limpiarCarrito();
+        actualizarCarrito(carrito);
+        renovarStorage();
+        obtenerComentarios();
+
+    })
 })
 
 

@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "nombre": "pelota1",
+        "imagen": "producto1.jpg",
+        "precio": 3000
+    },
+    {
+        "id": 2,
+        "nombre": "pelota2",
+        "imagen": "producto2.jpg",
+        "precio": 4000
+    },
+    {
+        "id": 3,
+        "nombre": "pelota3",
+        "imagen": "producto3.jpg",
+        "precio": 5000
+    },
+    {
+        "id": 4,
+        "nombre": "pelota4",
+        "imagen": "producto4.jpg",
+        "precio": 5000
+    },
+    {
+        "id": 5,
+        "nombre": "pelota5",
+        "imagen": "producto5.jpg",
+        "precio": 5000
+    },
+    {
+        "id": 6,
+        "nombre": "pelota6",
+        "imagen": "producto6.jpg",
+        "precio": 5000
+    },
+    {
+        "id": 7,
+        "nombre": "pelota7",
+        "imagen": "producto7.jpg",
+        "precio": 5000
+    },
+    {
+        "id": 8,
+        "nombre": "pelota8",
+        "imagen": "producto8.jpg",
+        "precio": 5000
+    },
+    {
+        "id": 9,
+        "nombre": "pelota9",
+        "imagen": "producto9.jpg",
+        "precio": 5000
+    },
+    {
+        "id": 10,
+        "nombre": "pelota10",
+        "imagen": "producto10.jpg",
+        "precio": 5000
+    }
+]
