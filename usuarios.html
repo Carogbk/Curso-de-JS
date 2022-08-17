@@ -17,62 +17,57 @@
         <div class="container container--flex">
             <div class="conteiner-fluid contenido-header">
                 <h1 class="title-header">Pikia´s Ball</h1>
-            </div>
-            <div class="contenido-header1">
-                <span>Contáctanos</span>
-                <p><i class="fa-solid fa-phone"></i>Télefono 3571614756</p>
-            </div>
-            <div class="contenido-header2">
-                <a href="" class="carrito-header">Mi Carrito <i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="./img/logo/7a02ddf0-80a6-482a-8765-7d45596bc7b1.jpg" alt="" width="50" height="50">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Productos
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="./index.html">Futbol</a></li>
-                                <li><a class="dropdown-item" href="./index.html">Niños</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#subtituloProductos">Todos los productos</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Iniciar Sesión</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./usuarios.html">Usuarios</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="buscar" placeholder="Buscar Productos"
-                            aria-label="buscar">
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+        <div class="contenido-header2 ">
+        <a type="button" class="carrito-headerbtn badge rounded-pill bg-success position-relative" href="./registro.html">
+          <i class="fa-solid fa-cart-shopping"></i>Mi Carrito
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="compra">
+            <span class="visually-hidden">unread messages</span>
+          </span>
+        </a>
+      </div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="./img/logo/7a02ddf0-80a6-482a-8765-7d45596bc7b1.jpg" alt="" width="50" height="50">
+    </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Productos
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="./index.html">Futbol</a></li>
+                <li><a class="dropdown-item" href="./index.html">Niños</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="./index.html">Todos los productos</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Iniciar Sesión</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./usuarios.html">Usuarios</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="buscar" placeholder="Buscar Productos" aria-label="buscar">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
     </header>
     <h1 class="titleUser">Usuarios que realizaron compras</h1>
     <div class="container">
@@ -85,5 +80,5 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="index.js"></script>
+    <script src="./usuarios.js"></script>
 </body>

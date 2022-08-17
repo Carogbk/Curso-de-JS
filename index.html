@@ -14,19 +14,25 @@
 
 <body>
     <header class="main-header">
+      <div class="bannerSmall container alert alert-dark" role="alert">
+        Contáctanos: <i class="fa-solid fa-phone"></i> 3571614756
+        <i class="fa-solid fa-envelope"></i> carogonzalez722@gmail.com
+      </div>
+            
     <div class="container container--flex">
         <div class="conteiner-fluid contenido-header">
             <h1 class="title-header">Pikia´s Ball</h1>
     </div>
-        <div class="contenido-header1">
-            <span>Contáctanos</span>
-            <p><i class="fa-solid fa-phone"></i>Télefono 3571614756</p>
-    </div>      
-        <div class="contenido-header2">
-        <a href="" class="carrito-header">Mi Carrito <i class="fa-solid fa-cart-shopping"></i></a>
-      </div>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="contenido-header2 ">
+    <a type="button" class="carrito-headerbtn badge rounded-pill bg-success position-relative" href="./registro.html">
+      <i class="fa-solid fa-cart-shopping"></i>Mi Carrito
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="compra">
+        <span class="visually-hidden">unread messages</span>
+      </span>
+    </a>
+  </div>
+  </div>
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="./img/logo/7a02ddf0-80a6-482a-8765-7d45596bc7b1.jpg" alt="" width="50" height="50">
@@ -44,17 +50,18 @@
                 Productos
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Futbol</a></li>
-                <li><a class="dropdown-item" href="#">Niños</a></li>
+                <li><a class="dropdown-item" href="#subtituloProductos">Futbol</a></li>
+                <li><a class="dropdown-item" href="#subtituloProductos">Niños</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#subtituloProductos">Todos los productos</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Iniciar Sesión</a>
+              <a class="nav-link active" aria-current="page" href="#iniciarSesion
+              ">Iniciar Sesión</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+              <a class="nav-link active" aria-current="page" href="#contacto">Contacto</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="./usuarios.html">Usuarios</a>
@@ -69,7 +76,8 @@
     </nav>
     </header>
     <main>
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <!-- carousel -->
+        <div id="carouselExampleIndicators" class="container carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -100,66 +108,232 @@
           <div class="container">
             <div class="row" id="cards"></div>
         </div>
-        <div>
-            <h2 class="subtitulo">Registro de tu compra</h2>
-        </div>
-        
-        <div class="d-flex flex-row bd-highlight mb-3t btnCarrito">
-          <div class="p-2 bd-highlight">
-          <button onclick="finalizarCompra()" class="btn-outline-success botonFinalizarCompra">Finalizar Compra</button>
-        </div>
-        <div class="p-2 bd-highlight">
-          <button onclick="limpiarCarrito()" class="btn-outline-success botonFinalizarCompra">Limpiar Carrito</button>
-        </div>
+        <h3 class="subtitulo2">Conoce nuestra forma de trabajar</h3>
+        <div class="bannerProductos">
+          <div class="containerProductos">
+              <img src="./img/fondos/envios.png" alt="dibujo de camion con bandera de Argentina" class="imgProductos">
+          <div class="overlay">
+          <article class="text">Envíos gratis a todo el país a partir de $5.000</article>
+          </div>
+          </div>
+          <div class="containerProductos">
+              <img src="./img/fondos/compra.png" alt="dibujo de persona con un carrito de supermercado" class="imgProductos">
+          <div class="overlay">
+          <article class="text">Compra Protegida</article>
+          </div>
+          </div>
+          <div class="containerProductos">
+              <img src="./img/fondos/dibujo-manual-de-la-pelota-fútbol-ilustración-aislada-sobre-fondo-blanco-168694727.jpg" alt="dibujo de un florero, cuadro y banco para sentarse" class="imgProductos">
+          <div class="overlay">
+          <article class="text">Sin mínimo por productos</article>
+          </div>
+          </div>
       </div>
-        <div id="carrito"></div>
+      <!-- medios de pago -->
+      <h3 class="subtitulo2">Nuestros Medios de Pago</h3>
+    <section class="mediosDePago">
+        <article class="botonPago">
+            <p>
+              <i class="fa-solid fa-futbol"></i> Tarjetas de Credito
+            </p>
+        </article>
+        <article class="botonPago">
+            <p>
+              <i class="fa-solid fa-futbol"></i> Tarjetas de Debito
+            </p>
+        </article>
+        <article class="botonPago">
+        <p>
+          <i class="fa-solid fa-futbol"></i>  Transferencias Bancarias
+        </p>
+        </article>
+        <article class="botonPago">
+          <i class="fa-solid fa-futbol"></i>  Efectivo
+        </article>
+    </section>
+    <!-- alerta -->
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Hey!</strong> No te olvides de registrar tu cuenta o iniciar sesión para poder realizar la compra!
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+        <!-- formularios -->
         <form>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="inputEmail4">Email</label>
-              <input type="email" class="form-control" id="inputEmail4">
-            </div>
-            <div class="form-group col-md-6">
-              <label for="inputPassword4">Password</label>
-              <input type="password" class="form-control" id="inputPassword4">
-            </div>
+          <h2 class="subtitulo" id="iniciarSesion">Inciar Sesión</h2>
+          <div class="container form-group">
+            <label for="inputMail">Mail</label>
+            <input type="email" class="form-control" id="inputMail" placeholder="ejemplo@ejemplo.com">
           </div>
-          <h2 class="subtitulo">Incia Sesión o Registrate</h2>
-          <div class="form-group">
-            <label for="inputAddress">Address</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+          <div class=" container form-group">
+            <label for="inputContraseña">Contraseña</label>
+            <input type="password" class="form-control" id="inputMail" placeholder="********">
           </div>
-          <div class="form-group">
-            <label for="inputAddress2">Address 2</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-success" type="button">Iniciar Sesión</button>
           </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="inputCity">City</label>
-              <input type="text" class="form-control" id="inputCity">
+      </form>
+      <!-- registrar cuenta -->
+          <h2 class="subtitulo">Registra tu Cuenta</h2>
+          <div class="container form-group">
+            <label for="inputName">Nombre y Apellido</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Escribe tu Nombre y Apellido">
+          </div>
+          <div class="container form-group">
+            <label for="inputMail">Mail</label>
+            <input type="email" class="form-control" id="inputMail" placeholder="ejemplo@ejemplo.com">
+          </div>
+          <div class="container form-group">
+            <label for="inputContraseña">Contraseña</label>
+            <input type="password" class="form-control" id="inputMail" placeholder="********">
+          </div>
+          <div class="container form-group">
+            <div class="form-group ">
+              <label for="inputCel">Teléfono</label>
+              <input type="number" class="form-control" id="inputCel" placeholder="0123-45678910">
             </div>
-            <div class="form-group col-md-4">
-              <label for="inputState">State</label>
-              <select id="inputState" class="form-control">
-                <option selected>Choose...</option>
-                <option>...</option>
+            <div class="container form-group ">
+              <label for="inputProvincia">Provincia</label>
+              <select id="inputProvincia" class="form-control ">
+                <option selected>Provincia</option>
+                <option>Cordoba</option>
+                <option>Buenos Aires</option>
+                <option>Santa Fe</option>
+                <option>Mendoza</option>
+                <option>Entre Ríos</option>
+                <option>Corrientes</option>
+                <option>Tucuman</option>
+                <option>Santiago del Estero</option>
+                <option>Salta</option>
+                <option>Jujuy</option>
+                <option>Chubut</option>
+                <option>Formosa</option>
+                <option>Catamarca</option>
+                <option>San Luis</option>
+                <option>San Juan</option>
+                <option>Santa Cruz</option>
+                <option>La Pampa</option>
+                <option>Tierra del Fuego</option>
+                <option>Rio Negro</option>
+                <option>Neuquen</option>
+                <option>Chaco</option>
+                <option>Misiones</option>
+                <option>La Rioja</option>
               </select>
             </div>
-            <div class="form-group col-md-2">
-              <label for="inputZip">Zip</label>
-              <input type="text" class="form-control" id="inputZip">
+            <div class="container form-group">
+              <label for="inputCiudad">Ciudad</label>
+              <input type="text" class="form-control" id="inputCiudad" placeholder="Ciudad">
             </div>
           </div>
           <div class="form-group">
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="gridCheck">
               <label class="form-check-label" for="gridCheck">
-                Check me out
+                Recordar mis datos
               </label>
             </div>
-          </div>
-          <button type="submit" class="btn btn-primary">Sign in</button>
+            <div class="d-grid gap-2 col-6 mx-auto">
+              <button class="btn btn-success" type="button">Registate</button>
+            </div>
         </form>
+        <!-- contacto -->
+        <h2 class="subtitulo" id="contacto">Contactate con Nosotros</h2>
+    <article class="pContacto">
+        <p class="pContacto text-center">No dudes en realizar tu consulta por cualquier medio de contacto, o tambien podes
+            acercarte a nuestro showroom, estaremos atentos siempre para brindarte la mejor atención</p>
+    </article>
+    <div class="container contacto rounded">
+      <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 ">
+          <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13510.503317243507!2d-63.900046680468506!3d-32.16039464859834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cd124847d57709%3A0x1fe921fa9bc4d823!2sVilla%20Ascasubi%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1648420464435!5m2!1ses!2sar"
+              width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class=" col-lg-6 col-md-6 col-sm-12  text-center">
+          <strong> Direccion:</strong><p> Villa Ascasubi </p>
+          <strong> Horarios de Atención:</strong><p>Lunes a Viernes de 08:00 hs a 13:00 hs</p>
+          <strong> Teléfono:</strong><p>03571-15614756</p>
+          <strong> Mail:</strong><p>carogonzalez722@gmail.com</p>
+      </div>
+  </div>
+  </div>
+  <h2 class="subtitulo">Dejanos tu consulta</h2>
+<form class="container form p-5">
+    <div class="form-group">
+        <label for="usr">Nombre:</label>
+        <input type="text" class="form-control" id="usr">
+    </div>
+    <div class="form-group">
+        <label for="usr">Apellido:</label>
+        <input type="text" class="form-control" id="usr">
+    </div>
+    <div class="form-group">
+        <label for="usr">Género:</label>
+    </div>
+    <div class="form-group">
+        <label for="usr">Numero de Teléfono:</label>
+        <input type="number" class="form-control" id="usr">
+    </div>
+    <div class="form-group">
+        <label for="usr">Mail:</label>
+        <input type="email" class="form-control" id="usr">
+    </div>
+    <div class="form-group">
+        <label for="sel1">Te contactamos por:</label>
+        <select class="form-control" id="sel1">
+            <option>Whatsapp</option>
+            <option>Mail</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="comment">Escribi tu consulta:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+    </div>
+    <button type="submit" class="btn btn-secondary">Enviar</button>
+</form>
+<footer>
+  <div>
+      <h4 class="tituloFooter">Pikia´s Ball</h4>
+  </div>
+  <section class="container-fluid">
+      <div class="row">
+          <article class="redesSociales col-lg-12 col-md-12 col-sm-12 text-center h4">
+              <a href="https://www.facebook.com/" target="_blank" class="fa-brands fa-facebook"></a>
+              <a href="https://www.instagram.com/" target="_blank" class="fa-brands fa-instagram"></a>
+              <a href="https://twitter.com/home?lang=es" target="_blank" class="fa-brands fa-twitter"></a>
+              <a href="https://wa.link/znzpnb" target="_blank" class="fa-brands fa-whatsapp"></a>
+          </article>
+      </div>
+      <div class="row">
+
+          <article class="col-lg-12 col-md-12 col-sm-12 align-self-stretch bd-highlight">
+              <h5 class="font-weight-lighter">Suscríbete para recibir todas las novedades</h5>
+          </article>
+          <div class="col-lg-9 col-md-9 col-sm-9 mb-3  align-self-stretch bd-highlight">
+              <input type="email" class="form-control" id="mailUsuario" placeholder="nombre@ejemplo.com">
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-9 mb-3 align-self-stretch bd-highlight">
+              <input type="submit" name="" id="nameUsuario" value="Enviar" class="btn btn-secondary">
+          </div>
+          <section class="col-lg-12 col-md-12 col-sm-12">
+              <ul class="listaFooter">
+                  <li>
+                      <a class="nav-link" href="./index.html">Inicio</a>
+                  </li>
+                  <li>
+                      <a class="nav-link" href="#subtituloProductos">Productos</a>
+                  </li>
+                  <li>
+                      <a class="nav-link" href="#contacto">Contacto</a>
+                  </li>
+                  <li>
+                      <a class="nav-link" href="#iniciarSesion">Ingresar</a>
+                  </li>
+              </ul>
+          </section>
+  </section>
+</footer>
+
     </main>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
